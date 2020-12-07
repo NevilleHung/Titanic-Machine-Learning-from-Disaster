@@ -32,3 +32,15 @@ cm = confusion_matrix(Y_train, Y_pred)
 print(cm)
 from sklearn.metrics import precision_score
 print(precision_score(Y_train, Y_pred))
+
+# Select X variables to be used in Testing set and re-code Sex 
+X_test=test[['Sex', 'Age', 'SibSp', 'Parch', 'Fare']]
+X_test["Sex"].replace({"male": 1, "female": 0}, inplace=True)
+
+# Filling in missing value in X variables of Testing set using Random Forest 
+X_test.replace([np.inf, -np.inf], np.nan)
+X_imputed_test = imputer.fit_transform(X_test)
+
+# Predicting the Testing set results
+y_pred = classifier.predict(X_imputed_test)
+print(y_pred)
