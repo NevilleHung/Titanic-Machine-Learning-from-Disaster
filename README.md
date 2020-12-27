@@ -1,4 +1,4 @@
-# Titanic-Machine-Learning-from-Disaster
+# Titanic - Machine Learning from Disaster
 
 Titanic - Machine Learning from Disaster is one of the Kaggle competitions which aims at using machine learning to create a model for  predicting the type of passengers survived the Titanic shipwreck. (website: https://www.kaggle.com/c/titanic/overview/description)
 
